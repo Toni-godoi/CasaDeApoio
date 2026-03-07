@@ -102,6 +102,7 @@ GestorHospedagens --> UC13
 GestorHospedagens --> UC14
 GestorHospedagens --> UC15
 Sistema --> UC16
+Sistema --> UC5
 GestorHospedagens --> UC22
 GestorQuartos --> UC8
 GestorQuartos --> UC9
