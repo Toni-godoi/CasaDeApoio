@@ -16,14 +16,14 @@ Sistema([sistema])
 subgraph hospedes
     UC1((Cadastrar e editar Hóspedes))
     UC2((Consultar lista de hóspedes))
-    UC4((Vincular um hospede a um logradouro))
+    UC3((Vincular um hospede a um logradouro))
 end
 
 %% ======================
 %% Epico 2 - Logradouros
 %% ======================
 subgraph logradouros
-    UC3((Cadastrar ou editar logradouros no sistema))
+    UC4((Cadastrar ou editar logradouros no sistema))
     UC5((Atualziar lista de endereços via API))
 end
 
@@ -89,12 +89,12 @@ Admin --> UC23
 Admin --> UC24
 GestorHospedes --> UC1
 GestorHospedes --> UC2
-GestorHospedes --> UC4
+GestorHospedes --> UC3
 GestorHospedes --> UC17
 GestorSolicitantes --> UC6
 GestorSolicitantes --> UC7
 GestorSolicitantes --> UC19
-GestorLogradouros --> UC3
+GestorLogradouros --> UC4
 GestorLogradouros --> UC5
 GestorLogradouros --> UC20
 GestorHospedagens --> UC10
@@ -113,9 +113,9 @@ GestorQuartos --> UC21
 %% ======================
 %% EXTENDS
 %% ======================
-UC4 -. extend .-> UC3
-UC3 -. extend .-> UC5
-UC6 -. extend .-> UC3
+UC3 -. extend .-> UC4
+UC4 -. extend .-> UC5
+UC7 -. extend .-> UC4
 UC10 -. extend .-> UC1
 UC11 -. extend .-> UC1
 UC12 -. extend .-> UC10
