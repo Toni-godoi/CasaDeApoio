@@ -16,6 +16,7 @@ Sistema([sistema])
 subgraph hospedes
     UC1((Cadastrar e editar Hóspedes))
     UC2((Consultar lista de hóspedes))
+    UC4((Vincular um hospede a um logradouro))
 end
 
 %% ======================
@@ -88,6 +89,7 @@ Admin --> UC23
 Admin --> UC24
 GestorHospedes --> UC1
 GestorHospedes --> UC2
+GestorHospedes --> UC4
 GestorHospedes --> UC17
 GestorSolicitantes --> UC6
 GestorSolicitantes --> UC7
@@ -111,7 +113,7 @@ GestorQuartos --> UC21
 %% ======================
 %% EXTENDS
 %% ======================
-UC1 -. extend .-> UC3
+UC4 -. extend .-> UC3
 UC3 -. extend .-> UC5
 UC6 -. extend .-> UC3
 UC10 -. extend .-> UC1
