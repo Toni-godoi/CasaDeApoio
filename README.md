@@ -7,7 +7,7 @@ casas de apoio que acomodam pacientes e acompanhantes provenientes de outras cid
 ## QUE
 necessitam administrar de forma organizada e sistêmica o controle de quartos, hospedagens, pacientes, acompanhantes e períodos de permanência, garantindo rastreabilidade das informações, transparência administrativa e acompanhamento completo da rotina institucional,
 ## O
-Sistema de Gestão para Casas de Apoio é um software web desenvolvido em Django, que permite registrar, organizar, controlar e emitir relatórios sobre toda a operação da casa de apoio, incluindo gestão de hóspedes, vínculos entre pacientes e acompanhantes, ocupação de quartos e histórico de estadias,
+Sistema de Gestão para Casas de Apoio é um software web que permite registrar, organizar, controlar e emitir relatórios sobre toda a operação da casa de apoio, incluindo gestão de hóspedes, vínculos entre pacientes e acompanhantes, ocupação de quartos e histórico de estadias,
 ## AO CONTRARIO DE
 * sistemas atualmente utilizados pelas casas de apoio, que apresentam limitações operacionais como a impossibilidade de alteração do vínculo de uma pessoa entre paciente e acompanhante após o cadastro, além da ausência de relatórios personalizados capazes de demonstrar a rotina da instituição, históricos de hospedagem, alterações cadastrais e vinculações entre hóspedes, quartos e períodos;  
 * sistemas hospitalares tradicionais, voltados à gestão clínica e assistencial, cujo foco está em prontuários médicos, procedimentos e internações, não contemplando a dinâmica de acolhimento, hospedagem social e administração de permanência características das casas de apoio;  
