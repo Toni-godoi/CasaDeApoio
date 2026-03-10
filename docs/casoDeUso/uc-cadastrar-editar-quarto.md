@@ -1,10 +1,8 @@
-# Caso de Uso: Cadastrar Quartos
-
-## Informações Gerais
+# Informações Gerais
 
 | Campo | Valor |
 |---|---|
-| **Nome do Caso de Uso** | Cadastrar quartos |
+| **Nome do Caso de Uso** | Cadastrar e editar quartos |
 | **Descrição** | O gestor de quartos pode cadastrar um novo quarto |
 | **Ator envolvido** | Gestor de quartos |
 
