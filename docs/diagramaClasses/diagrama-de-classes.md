@@ -5,24 +5,24 @@ classDiagram
 %% CLASSES
 %% =========================
 
-class Usuario {
+class Pessoa {
     +codigo
-    +dataCadastro
-    +dataAlteracao
-    +usuarioCriador
     +nome
-    +situacao
-    +login
-    +senha
-    +dataNascimento
-    +idade
     +cpf
-    +numeroTelefone
+    +dataNascimento
+    +telefone
     +email
-    +perfil
-    +logradouro
     +numeroResidencia
     +complemento
+    +dataCadastro
+    +dataAlteracao
+    +usuarioCadastro
+}
+
+class Usuario {
+    +login
+    +senha
+    +situacao
 }
 
 class PerfilUsuario {
@@ -31,48 +31,22 @@ class PerfilUsuario {
 }
 
 class Hospede {
-    +codigo
-    +dataCadastro
-    +dataAlteracao
-    +usuarioCriador
-    +nome
-    +comum
-    +dataNascimento
-    +idade
-    +cpf
-    +numeroTelefone
-    +email
-    +logradouro
-    +numeroResidencia
-    +complemento
+    +comumCgg
+}
+
+class Solicitante {
+    +tipo
+    +comumCgg
 }
 
 class Logradouro {
     +codigo
-    +dataCadastro
-    +dataAlteracao
     +cep
     +estado
     +cidade
     +bairro
-}
-
-class Solicitante {
-    +codigo
     +dataCadastro
     +dataAlteracao
-    +usuarioCriador
-    +nome
-    +tipo
-    +comum
-    +dataNascimento
-    +idade
-    +cpf
-    +numeroTelefone
-    +email
-    +logradouro
-    +numeroResidencia
-    +complemento
 }
 
 class Quarto {
@@ -80,26 +54,49 @@ class Quarto {
     +numero
     +bloco
     +andar
+    +descricao
+    +capacidadePacientes
+    +reservasTemporarias
     +situacao
-    +dataRegistro
+    +dataCadastro
     +dataAlteracao
     +usuarioCadastro
 }
 
-class ReservaQuarto{
-}
-
 class Hospedagem {
-}
-
-class Paciente {
+    +codigo
     +dataEntrada
     +dataSaida
 }
 
 class Acompanhante {
+    +codigo
     +dataEntrada
     +dataSaida
-    +paciente
 }
+
+%% =========================
+%% HERANÇA
+%% =========================
+Pessoa <|-- Usuario
+Pessoa <|-- Solicitante
+Pessoa <|-- Hospede
+
+%% =========================
+%% AGREGAÇÃO
+%% Pedido usa Produto
+%% =========================
+Usuario o--> PerfilUsuario
+Solicitante o--> Hospedagem
+Hospede o--> Hospedagem
+Quarto o--> Hospedagem
+Hospede o--> Acompanhante
+Pessoa o--> Logradouro
+
+%% =========================
+%% COMPOSIÇÃO
+%% =========================
+Acompanhante *--> Hospedagem
+
+
 
