@@ -54,6 +54,8 @@
 | Andar | Número do andar | Obrigatório | FALSE | INT | 2 | | | `^\d{2}$` |
 | Usuário | Usuário que está cadastrando o quarto | Obrigatório | FALSE | Texto | 120 | | `current_user` | `^[A-Za-zÀ-ÿ\s]{2,120}$` |
 | Situação | Situação do quarto que sempre será como "ativo" ao cadastrar um novo quarto | Obrigatório | FALSE | Boolean | 1 | | TRUE | |
+| Vagas | Quantidade de pacientes que o quarto suporta | Obrigatório | FALSE | INT | 3 | | 1 | |
+
 
 # BPD da função
 <img width="2626" height="762" alt="uc-cadastroQuarto" src="https://github.com/user-attachments/assets/185c68d4-c3d4-487b-b88d-981dd68a5be8" />
