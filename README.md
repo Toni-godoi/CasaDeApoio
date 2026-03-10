@@ -15,20 +15,6 @@ Sistema de Gestão para Casas de Apoio é um software web que permite registrar,
 ## NOSSO SISTEMA
 permite cadastrar qualquer pessoa inicialmente como hóspede e vinculá-la, a qualquer momento, como paciente ou acompanhante, possibilitando alterações dinâmicas conforme a necessidade da instituição, além de oferecer controle completo da ocupação de quartos, histórico de permanência e emissão de relatórios personalizados gerais e individuais sobre períodos de hospedagem, vínculos, cadastros e alterações realizadas no sistema.
 
-# Visão do produto detalhada  
-Problema: A casa de apoio necessita administrar o controle de hóspedes (pacientes e acompanhantes).  
-O sistema atual não permite emissão eficiente de relatórios personalizados nem controle simplificado da rotina.  
-
-Público-Alvo  
-*Administradores da casa de apoio  
-*Funcionários responsáveis pelo cadastro e controle  
-*Gestão administrativa  
-
-Proposta de Valor - Sistema web que permite:  
-*Registrar hóspedes (pacientes e acompanhantes)  
-*Controlar ocupação de quartos  
-*Emitir relatórios personalizados  
-*Acompanhar vigência e histórico de permanência  
 
 # Regras de negócio  
 
@@ -40,121 +26,8 @@ Qualquer pessoa deve ser registrado no sistema como hóspede, e no momento em qu
 
 O acompanhante pode dar entrada no quarto a qualquer momento, sem necessidade do paciente estar junto presencialmente, embora o paciente precise ser vinculado no momento da entrada (basta que haja os dados do paciente para que a entrada seja efetivada).
 
-O quarto pode ser reservado previamente, antes da data da entrada, desde que haja indicação de um Diácono. Um quarto também só pode ser ocupado mediante a solicitação do Diácono.
+O quarto pode ser reservado previamente, antes da data da entrada, desde que haja indicação de um Diácono.Um paciente também só pode ser vinculado ao quarto mediante a solicitação do Diácono.
 
-A alocação do quarto só se encerra no momento em que o paciente registra sua saída. O acompanhante pode sair a qualquer momento, e, também, pode haver troca de acompanhantes a qualquer momento no período em que o paciente está vinculado ao quarto, mesmo que o paciente não esteja presencialmente na casa de apoio (casos em que o paciente está internado em algum hospital).
+O acompanhante pode sair a qualquer momento, e, também, pode haver troca de acompanhantes a qualquer momento no período em que o paciente está vinculado ao quarto, mesmo que o paciente não esteja presencialmente na casa de apoio (casos em que o paciente está internado em algum hospital).
 
-RN: O sistema deve permitir o cadastro e atualização de hóspedes.
-
-RN: O sistema deve guardar o registro de datas de quando um hóspede foi registrado ao sistema, e todas as datas de atualizações que sofreu.
-
-RN: O sistema deve classificar um hóspede como paciente ou acompanhante no momento do vínculo de um paciente a um quarto. O hóspede só pode ser acompanhante se existir um paciente a quem ele será vinculado.
-
-RN: O sistema deve guardar o registro de datas em que um hóspede foi classificado como paciente e o quarto ao qual ele foi vinculado. Também deve registrar a data de entrada do paciente no quarto e a data de saída do paciente.
-
-RN: Um quarto pode ser reservado, mas não há obrigatoriedade de registros para relatório de reserva. Ao criar uma reserva de quarto, ela precisa constar campos obrigatórios de nome completo e cpf do solicitante e nome completo da pessoa que será paciente. Também, deve constar nome completo do diácono ou cooperador que intermedia a solicitação de reserva, e este, por sua vez, deve estar cadastrado no sistema. Também deve haver um campo de descrição, que será descrito o motivo da reserva. As informações solicitadas para preenchimento da reserva só são armazenadas na própria reserva, e não ficam registradas no sistema. Se a reserva foi desfeita, então as informações da reserva também são excluídas.
-
-RN: Um quarto é considerado ocupado quando o seu paciente vinculado, ou algum acompanhante vinculado ao paciente registram a entrada na casa de apoio. E o quarto é considerado desocupado quando o paciente é desvinculado do mesmo.
-
-RN: Se caso o paciente estiver internado em algum hospital da cidade, o acompanhante pode dar entrada na casa de apoio sem a presença do paciente. Mas o paciente precisa estar vinculado ao quarto do acompanhante.
-
-RN: O paciente é vinculado ao quarto. Qualquer acompanhante deve ser vinculado ao paciente, e fica vinculado automaticamente com o quarto do paciente naquele período.
-
-RN: O acompanhante pode registrar entrada e saída a qualquer momento do quarto. Sua saída é marcada quando ele é desvinculado do paciente. Todas as datas de vínculos e desvinculações de um acompanhante a um paciente devem ser registradas. Um mesmo acompanhante pode ser vinculado ou desvinculado do paciente várias vezes, no período em que o paciente segue vinculado ao quarto.
-
-RN: Quando um paciente é desvinculado de um quarto, qualquer acompanhante vinculado ao paciente também é desvinculado do quarto.
-
-# User story
-
-## Permissões do sistema  
-*US01  
-Como administrador quero acesso completo a todas as funcionalidades do sistema para gerenciar em modo super usuário tudo o que acontece. Como administrador, também quero criar novos usuários do sistema e definir suas permissões. 
-
-# Requisitos Funcionais
-
-RF: Controle de Permissões  
-*Épico: módulo cadastros  
-RF: Cadastro e alterações de hóspedes  
-RF: Cadastro e alterações de diácono ou cooperador  
-RF: Cadastro e alterações de quartos  
-RF: Cadastro e alterações de logradouros  
-*Épico: módulo de gerencia de quartos  
-RF: Permitir a reserva de quartos  
-RF: Vincular hóspede a um quarto como paciente  
-RF: Vincular um hóspede a um paciente e quarto como acompanhante  
-RF: Controle de quartos ocupados, reservados e livres  
-*Épico: Relatórios  
-RF: Relatório de cadastros totais de hóspedes por semana, meses ou períodos personalizados  
-RF: Relatório de vinculações totais de hóspedes como pacientes, por semana, meses ou períodos personalizados  
-RF: Relatório de vinculações totais de hóspedes como acompanhantes, por semana, meses ou períodos personalizados  
-RF: Relatório individual por hóspede, contendo todo seu histórico de alterações no sistema e vínculos atribuídos por semana, meses ou períodos personalizados  
-
-# Caso de Uso
-
-```mermaid
-flowchart TB
-
-Admin([Administrador])
-
-%% ======================
-%% Gestão de Acesso
-%% ======================
-subgraph Gestão de Acesso
-    UC1((Criar Perfis de Permissão))
-    UC2((Criar Usuários do Sistema))
-end
-
-%% ======================
-%% Gestão de Cadastros
-%% ======================
-subgraph Gestão de Cadastros
-    UC3((Cadastrar/Alterar Hóspedes))
-    UC4((Cadastrar/Alterar Diácono ou Cooperador))
-    UC5((Cadastrar/Alterar Quartos))
-    UC6((Cadastrar/Alterar Logradouros))
-end
-
-%% ======================
-%% Gestão de Quartos
-%% ======================
-subgraph Gestão de Quartos
-    UC7((Controlar Status dos Quartos))
-    UC8((Reservar Quarto))
-    UC9((Vincular Paciente ao Quarto))
-    UC10((Vincular Acompanhante ao Paciente))
-end
-
-%% ======================
-%% Relatórios
-%% ======================
-subgraph Gestão de Relatórios
-    UC11((Emitir Relatórios do Sistema))
-end
-
-%% ======================
-%% Associações
-%% ======================
-Admin --> UC1
-Admin --> UC2
-Admin --> UC3
-Admin --> UC4
-Admin --> UC5
-Admin --> UC6
-Admin --> UC7
-Admin --> UC8
-Admin --> UC9
-Admin --> UC10
-Admin --> UC11
-
-%% ======================
-%% EXTENDS
-%% ======================
-UC3 -. extend .-> UC6
-UC4 -. extend .-> UC6
-UC8 -. extend .-> UC4
-UC9 -. extend .-> UC3
-UC9 -. extend .-> UC4
-UC10 -. extend .-> UC3
-UC10 -. extend .-> UC4
-UC7 -. extend .-> UC5
-```
+Um quarto pode comportar 1, 2 ou mais pacientes, conforme o administrador da casa de apoio definir. Pontanto, um quarto está livre quando não há nenhum paciente dentro dele, e está ocupado quando seu limite máximo de pacientes esta preenchido. Quanto o quarto possui paciente, mas não esta com sua limitação máxima, o quarto exibe a quantidade de vagas livres.
