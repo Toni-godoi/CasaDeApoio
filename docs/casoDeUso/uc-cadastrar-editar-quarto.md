@@ -14,8 +14,8 @@
 
 | Funcionário | Sistema |
 |---|---|
-| Gestor de quartos seleciona para cadastrar um novo quarto | O sistema exibe uma tela para preenchimento de cadastro das informações do quarto com os campos descritos no dicionário de dados |
-| O usuário preenche os campos solicitados e seleciona cadastrar | O sistema atribui automaticamente valores para alguns campos obrigatórios e cadastra o quarto (RI01, RI02, RI03, RN01) |
+| Gestor de quartos seleciona para cadastrar um novo quarto ou editar quarto existente | O sistema exibe uma tela para preenchimento das informações do quarto com os campos descritos no dicionário de dados |
+| O usuário preenche os campos solicitados e seleciona cadastrar | O sistema atribui automaticamente valores para alguns campos obrigatórios e cadastra o quarto (RI01, RI02, RN01, RN02) |
 
 ---
 
@@ -35,6 +35,7 @@
 
 - **RN01** - O código do quarto não deve ser dado pelo número do quarto, mas pela ordem sequencial que esse quarto foi cadastrado no sistema.
 
+- **RN02** - O campo **Situação** que aparece para o usuário sempre é dado como **ativo** ao cadastrar um novo quarto. O usuário não conseguirá editá-lo durante o primeiro cadastro. Ele só pode ser inativo a partir da edição do cadastro.
 ---
 
 # Requisitos de Interface com o Usuário
@@ -42,10 +43,6 @@
 - **RI01** - O campo código que aparece para o usuário é preenchido automaticamente pelo sistema, com base na ordem de cadastro de quartos.
 
 - **RI02** - O campo **Data** deve ter um botão que ao clicar abre um calendário para o usuário selecionar dia/mês/ano do cadastro.
-
-- **RI03** - O campo **Situação** que aparece para o usuário sempre é dado como **ativo** ao cadastrar um quarto.  
-  O usuário não conseguirá editá-lo durante o cadastro.  
-  Ele só pode ser editado como **inativo** na função de edição do quarto.
 
 ---
 
