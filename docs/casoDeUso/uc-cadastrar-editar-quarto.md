@@ -52,9 +52,9 @@
 | Data | Data que o quarto foi cadastrado | Obrigatório | FALSE | Data | | | `current_date` | |
 | Número | Número do quarto | Obrigatório | TRUE | INT | 4 | | | `^\d{4}$` |
 | Andar | Número do andar | Obrigatório | FALSE | INT | 2 | | | `^\d{2}$` |
+| Vagas | Quantidade de pacientes que o quarto suporta | Obrigatório | FALSE | INT | 3 | | 1 | |
 | Usuário | Usuário que está cadastrando o quarto | Obrigatório | FALSE | Texto | 120 | | `current_user` | `^[A-Za-zÀ-ÿ\s]{2,120}$` |
 | Situação | Situação do quarto que sempre será como "ativo" ao cadastrar um novo quarto | Obrigatório | FALSE | Boolean | 1 | | TRUE | |
-| Vagas | Quantidade de pacientes que o quarto suporta | Obrigatório | FALSE | INT | 3 | | 1 | |
 
 
 # BPD da função
