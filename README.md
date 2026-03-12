@@ -29,7 +29,7 @@ Existem 3 tipos de pessoas no sistema:
 
 O acompanhante pode dar entrada no quarto a qualquer momento, sem necessidade do paciente estar junto presencialmente, embora o paciente precise ser vinculado no momento da entrada (basta que haja os dados do paciente para que a entrada seja efetivada).
 
-O quarto pode ser reservado previamente, antes da data da entrada, desde que haja solicitação de um solicitante.
+O quarto pode ser reservado previamente, antes da data da entrada, desde que haja solicitação de um solicitante. Qualquer paciente so pode ser vinculado a um quarto se houver um solicitante que houver pedido a vaga para o quarto. O paciente e o solicitante precisam ser da mesma região do estado/municipio.
 
 O acompanhante pode sair a qualquer momento, e, também, pode haver troca de acompanhantes a qualquer momento no período em que o paciente está vinculado ao quarto, mesmo que o paciente não esteja presencialmente na casa de apoio (casos em que o paciente está internado em algum hospital). Cada paciente tem o direito a ter 1 acompanhante no máximo.
 
