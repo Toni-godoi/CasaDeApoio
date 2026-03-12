@@ -22,12 +22,17 @@ Uma casa de apoio é o local da cidade onde pessoas que estão passando por trat
 
 Tanto paciente quanto o acompanhante são hóspedes do sistema. Um acompanhante só pode ser vinculado a um quarto desde que haja um paciente vinculado também.
 
-Qualquer pessoa deve ser registrado no sistema como hóspede, e no momento em que há um vínculo com quarto ele será classificado como acompanhante ou paciente. Após o quarto ser desocupado, ele continua no sistema com registro de hóspede.
+Existem 3 tipos de pessoas no sistema:  
+*Usuário de sistema: São quem vai ter login ao sistema e poderá agir ou executar funções e permissões do sistema.  
+*Solicitantes: É a pessoa que não possui acesso do sistema, mas é cadastrada. O solicitante é quem solicita a vaga para um paciente na casa de apoio. O solicitantes pode ser do tipo Diacono ou Cooperador.  
+*Hospede: É o objeto proncipal do sistema. É quem se hospeda na casa de apoio. Uma pessoa é cadastrada como hospede no sistema, e depois de ser um hospede pode ser vinculada a um quarto com paciente, ou pode ser vinculado a um paciente como acompanhante dele. Quando o paciente ou o acompanhante terminam sua estadia na casa de apoio, ambos continuam cadastrados no sistema como hóspede.  
 
 O acompanhante pode dar entrada no quarto a qualquer momento, sem necessidade do paciente estar junto presencialmente, embora o paciente precise ser vinculado no momento da entrada (basta que haja os dados do paciente para que a entrada seja efetivada).
 
-O quarto pode ser reservado previamente, antes da data da entrada, desde que haja indicação de um Diácono.Um paciente também só pode ser vinculado ao quarto mediante a solicitação do Diácono.
+O quarto pode ser reservado previamente, antes da data da entrada, desde que haja solicitação de um solicitante.
 
-O acompanhante pode sair a qualquer momento, e, também, pode haver troca de acompanhantes a qualquer momento no período em que o paciente está vinculado ao quarto, mesmo que o paciente não esteja presencialmente na casa de apoio (casos em que o paciente está internado em algum hospital).
+O acompanhante pode sair a qualquer momento, e, também, pode haver troca de acompanhantes a qualquer momento no período em que o paciente está vinculado ao quarto, mesmo que o paciente não esteja presencialmente na casa de apoio (casos em que o paciente está internado em algum hospital). Cada paciente tem o direito a ter 1 acompanhante no máximo.
 
-Um quarto pode comportar 1, 2 ou mais pacientes, conforme o administrador da casa de apoio definir. Pontanto, um quarto está livre quando não há nenhum paciente dentro dele, e está ocupado quando seu limite máximo de pacientes esta preenchido. Quanto o quarto possui paciente, mas não esta com sua limitação máxima, o quarto exibe a quantidade de vagas livres.
+Cada vez que um hospede registra entrada e saida como sendo paciente ou acompanhante, esse registro ficar armazenado para futuramente ser auditado e emitido relatorios.
+
+Um quarto pode comportar 1, 2 ou mais pacientes, conforme o administrador da casa de apoio definir. Pontanto, um quarto está livre quando não há nenhum paciente dentro dele, e está ocupado quando seu limite máximo de pacientes esta preenchido.
