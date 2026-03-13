@@ -8,72 +8,71 @@ classDiagram
 class Pessoa {
     +codigo:int
     +nome:string
-    +cpf:string
+    +cpf:varchar(11)
     +dataNascimento:date
     +telefone:string
     +email:string
     +numeroResidencia:string
     +complemento:string
-    +pontoReferencia:string
+    +pontoReferencia:text
     +dataCadastro:date
     +dataAlteracao:date
 }
 
 class Usuario {
-    +login
-    +senha
-    +situacao
+    +login:string
+    +senha:string
+    +situacao:boolean
 }
 
 class PerfilUsuario {
-    +codigo
-    +nome
+    +codigo:int
+    +nome:string
 }
 
 class Hospede {
-    +comumCgg
+    +comumCgg:string
 }
 
 class Solicitante {
-    +tipo
-    +comumCgg
+    +tipo:string
+    +comumCgg:string
 }
 
 class Endereco {
-    +codigo
-    +cep
-    +estado
-    +cidade
-    +distrito
-    +bairro
-    +dataCadastro
-    +dataAlteracao
+    +codigo:int
+    +cep:string
+    +estado:string
+    +cidade:string
+    +distrito:string
+    +bairro:string
+    +dataCadastro:date
+    +dataAlteracao:date
 }
 
 class Quarto {
-    +codigo
-    +numero
-    +bloco
-    +andar
-    +descricao
-    +capacidadePacientes
-    +reservasTemporarias
-    +situacao
-    +dataCadastro
-    +dataAlteracao
-    +usuarioCadastro
+    +codigo:int
+    +numero:int
+    +bloco:string
+    +andar:int
+    +descricao:string
+    +capacidadePacientes:int
+    +reservasTemporarias:int
+    +situacao:boolean
+    +dataCadastro:date
+    +dataAlteracao:date
 }
 
 class Hospedagem {
-    +codigo
-    +dataEntrada
-    +dataSaida
+    +codigo:int
+    +dataEntrada:date
+    +dataSaida:date
 }
 
 class Acompanhante {
-    +codigo
-    +dataEntrada
-    +dataSaida
+    +codigo:int
+    +dataEntrada:date
+    +dataSaida:date
 }
 
 %% =========================
