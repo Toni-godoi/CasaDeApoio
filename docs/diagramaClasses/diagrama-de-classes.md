@@ -6,17 +6,17 @@ classDiagram
 %% =========================
 
 class Pessoa {
-    +codigo
-    +nome
-    +cpf
-    +dataNascimento
-    +telefone
-    +email
-    +numeroResidencia
-    +complemento
-    +dataCadastro
-    +dataAlteracao
-    +usuarioCadastro
+    +codigo:int
+    +nome:string
+    +cpf:string
+    +dataNascimento:date
+    +telefone:string
+    +email:string
+    +numeroResidencia:string
+    +complemento:string
+    +pontoReferencia:string
+    +dataCadastro:date
+    +dataAlteracao:date
 }
 
 class Usuario {
@@ -39,11 +39,12 @@ class Solicitante {
     +comumCgg
 }
 
-class Logradouro {
+class Endereco {
     +codigo
     +cep
     +estado
     +cidade
+    +distrito
     +bairro
     +dataCadastro
     +dataAlteracao
@@ -91,7 +92,7 @@ Solicitante o--> Hospedagem
 Hospede o--> Hospedagem
 Quarto o--> Hospedagem
 Hospede o--> Acompanhante
-Pessoa o--> Logradouro
+Pessoa o--> Endereco
 
 %% =========================
 %% COMPOSIÇÃO
