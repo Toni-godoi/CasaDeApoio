@@ -8,7 +8,7 @@ classDiagram
 class Pessoa {
     +codigo:int
     +nome:string
-    +cpf:varchar(11)
+    +cpf:string
     +dataNascimento:date
     +telefone:string
     +email:string
